@@ -7,7 +7,7 @@ app.config["DEBUG"] = True
 def home():
     return '''<h1>Speech Analysis API</h1>
     <ol>
-    <li><b>Do you suffer from any health diseaes?</b></li>
+    <li><b>Do you suffer from any health diseases?</b></li>
     Answer: (Audio file)
     <br><br>
     <li><b>What is your annual income?</b></li>
