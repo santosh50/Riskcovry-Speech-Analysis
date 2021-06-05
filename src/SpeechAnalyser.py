@@ -1,6 +1,13 @@
 import yake
 import speech_recognition as sr
+import os
+"""
+import soundfile as sf
 
+data, samplerate = sf.read('ode_2.ogg')
+sf.write('new_soundfile_.ogg', data, samplerate)
+"""
+os.system('ffmpeg -i ode_2.ogg sample_audio.wav')
 #Convert Speech to Text
 r = sr.Recognizer()
 sample = sr.AudioFile("sample_audio.wav")
