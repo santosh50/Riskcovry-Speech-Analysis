@@ -43,9 +43,9 @@ class SpeechOggAudioFileToText:
             text = self.recognizer.recognize_google(audio, language='EN')
             return text
         except UnknownValueError:
-            print("Не удаётся распознать аудио файл")
+            print("Some error occured")
         except RequestError as error:
-            print("Не удалось запросить результаты: {0}".format(error))      
+            print("Some error occured: {0}".format(error))      
 
     
 
