@@ -20,7 +20,7 @@ with sample as source:
 diseases = ["high blood pressure","cancer","diabetes","thyroid"]
 extractor = yake.KeywordExtractor()
 language = "en"
-n_gram_size = 4
+n_gram_size = 3
 num_keywords = 4
 deduplication_threshold = 0.4
 custom_extractor = yake.KeywordExtractor(lan = language, n = n_gram_size, dedupLim = deduplication_threshold, top= num_keywords, features = None)
