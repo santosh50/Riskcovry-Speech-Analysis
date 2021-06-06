@@ -90,3 +90,6 @@ def main():
     t3="22 10 1998"
     t4="1998 March 10th"
     print(get_dob_response(t4))
+if __name__=="__main__":
+    main()
+
