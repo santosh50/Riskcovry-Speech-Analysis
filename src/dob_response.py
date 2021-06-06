@@ -61,10 +61,13 @@ def get_dob_response(audio_text):
     text=audio_text.split(" ")
     m=0
     d=0
+    mons={"january":1,"february":2,"march":3,"april":4,"may":5,"june":6,"july":7,"august":8,"september":9,"october":10,"november":11,"december":12}
     if get_number(text[0])==y:
         for i in text[1:]:
             if get_number(i)!=0 and m==0:
                 m=get_number(i)
+            elif i.lower() in mons:
+                m=mons[i.lower()]
             elif get_number(i)!=0 and m!=0:
                 d=get_number(i)
         return [str(d)+"/"+str(m)+"/"+str(y)]
@@ -76,7 +79,7 @@ def get_dob_response(audio_text):
             if d==0 and get_number(i)!=0:
                 d=get_number(i)
             elif d!=0 and i.lower() in mons:
-                m=mons[i]
+                m=mons[i.lower()]
                 return [str(d)+"/"+str(m)+"/"+str(y)]
             elif d!=0 and get_number(i)!=0:
                 m=get_number(i)
@@ -85,6 +88,5 @@ def main():
     t1="1998 10 22"
     t2="23rd december 1998"
     t3="22 10 1998"
-    print(get_dob_response(t3))
-if __name__=="__main__":
-    main()
+    t4="1998 March 10th"
+    print(get_dob_response(t4))
