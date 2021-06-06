@@ -130,6 +130,11 @@ Response:
 “answers”:["22/10/1998"]
 }
 ```
-
+## Proposed Solution
+* According to the given JSON, the options are generated as the user speaks about health diseases/dob/salary.
+* The audio file is a .ogg one encoded in base64. Since .ogg files are difficult to process, it's converted to .wav format.
+* From then on, after getting the text from speech, we extract certain keywords/alphanumeric characters from dob response, disease response, and income response to display the result.
 ## API endpoint
 https://a7lpc4ud64.execute-api.us-east-1.amazonaws.com/beta
+
+
